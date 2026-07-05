@@ -1,5 +1,1 @@
-## <center>BK3435 BLE配网测试<center/>
-
-![screen_01](doc/img/screen_01.png)
-
-* [协议参考](doc/BK72XX配网流程.md) 
+Android_BK_BLE_WIFI_NEW_2024031901 is the Android app used for configuring the 60G millimeter-wave radar's network connection.
