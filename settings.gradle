@@ -1,0 +1,3 @@
+rootProject.name='Android_BK_BLE_WIFI'
+include ':app', ':wifiscan'
+include ':bkblewifilib'

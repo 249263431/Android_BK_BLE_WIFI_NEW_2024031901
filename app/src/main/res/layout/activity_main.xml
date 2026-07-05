@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Network Test"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <!--ble name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bluetooth name:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_ble_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:gravity="left|bottom"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint=""/>
+
+            <Button
+
+                android:id="@+id/btn_search_ble"
+                style="@style/BtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="3dp"
+                android:onClick="onClick"
+                android:text="Choose bluetooth" />
+
+        </LinearLayout>
+
+
+        <!--ssid-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wi-Fi name:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size" />
+            <EditText
+                android:id="@+id/et_ssid"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:gravity="left|bottom"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint=""/>
+
+            <Button
+
+                android:id="@+id/btn_search_ssid"
+                style="@style/BtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="3dp"
+                android:onClick="onClick"
+                android:text="Choose SSID" />
+
+        </LinearLayout>
+
+        <!--password-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wi-Fi password:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_pwd"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:gravity="left|bottom"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint=""/>
+
+            <CheckBox
+                android:id="@+id/cb_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Password"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_start_config"
+            style="@style/BtnStyle"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:onClick="onClick"
+            android:text="Start confguring network" />
+
+        <EditText
+            android:id="@+id/et_log"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:singleLine="false"
+            android:background="@drawable/border_bg"
+            android:focusable="false"
+            android:textSize="10sp"
+            android:paddingLeft="8dp"
+            android:enabled="true"
+            android:layout_marginTop="15dp"
+            android:gravity="top|left"
+            android:scrollbars="vertical|horizontal"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_clear_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:visibility="visible"
+        app:backgroundTint="#007b6c"
+        app:rippleColor="@color/colorPrimary"
+        app:srcCompat="@drawable/delete_icon"
+        android:layout_gravity="right|bottom"
+  />
+
+</FrameLayout>
